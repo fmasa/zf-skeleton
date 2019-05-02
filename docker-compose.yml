@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    app:
+        image: xpinvest/apache-php-7.3
+        environment:
+            DEVELOPMENT_MACHINE: 'true'
+        volumes:
+            - www:/var/www
+            - .:/var/www/html
+volumes:
+    www:

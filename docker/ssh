@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]; then
+  command="bash"
+else
+  command="$@"
+fi
+
+docker-compose exec -u www-data app $command

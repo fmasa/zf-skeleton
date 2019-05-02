@@ -1,0 +1,11 @@
+services:
+    - Fmasa\Middleware\RoutesToHandler
+    - Fmasa\RequestHandlerRunnerFactory::create
+
+    - Fmasa\DispatcherFactory
+    - @Fmasa\DispatcherFactory::__invoke
+
+search:
+    - classes: Fmasa\Handler\*
+      in: %appDir%
+
